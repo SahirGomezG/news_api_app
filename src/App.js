@@ -59,34 +59,3 @@ const App = () => {
 };
 export default App;
 
-
-/*class App extends Component {
-
-  constructor(props){
-    super(props);
-    this.state = {
-      articles: [],
-      currentPage: 1,
-      numberheadlines: 10,
-    }
-  }
-  
-  componentDidMount(){
-    fetch('http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey='+ api_key)
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        this.setState({ articles: data.articles })
-      });
-  }
-  
-  render(){
-    console.log(this.state.articles)
-    return (
-      <div className="App">
-        <h4 className='text-primary mb-3'>News</h4>
-        <News news={this.state.articles}/>      
-      </div>
-    );}
-}*/
