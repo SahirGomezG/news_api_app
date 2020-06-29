@@ -1,17 +1,13 @@
 
-import { fetchArticlesSuccess } from './getAction';
+import fetchArticles from './getAction';
 
 const fetchNews = () => {
-    const api_key = '1800b5e6bc9b483d9e7422c502458a91';
     return (dispatch) => {
-        fetch('http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey='+ api_key)
-        .then(res => res.json())
-        .then(res => {
-            if(res.error) {
-                throw(res.error);
-            }
-            dispatch(fetchArticlesSuccess(res.articles));
-            return res.articles;
+        fetch('http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=1800b5e6bc9b483d9e7422c502458a91')
+        .then(response => { 
+            return response.json()})
+        .then(data => {          
+            dispatch(fetchArticles(data.articles));
         })
         .catch(error => {
             console.log(error);
