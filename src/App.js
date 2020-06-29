@@ -5,8 +5,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Articles from './Components/Articles';
 
-const api_key = '1800b5e6bc9b483d9e7422c502458a91';
-//const api_key = process.env.development.API_NEWS_KEY;
+const api_key = process.env.REACT_APP_API_NEWS_KEY;
 
 const App = () => {
   

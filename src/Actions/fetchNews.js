@@ -2,8 +2,10 @@
 import fetchArticles from './getAction';
 
 const fetchNews = () => {
+    const api_key = process.env.REACT_APP_API_NEWS_KEY;
+
     return (dispatch) => {
-        fetch('http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=1800b5e6bc9b483d9e7422c502458a91')
+        fetch('https://newsapi.org/v2/top-headlines?country=us&pageSize=100&apiKey='+api_key)
         .then(response => { 
             return response.json()})
         .then(data => {          

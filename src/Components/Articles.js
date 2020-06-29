@@ -12,7 +12,7 @@ class Articles extends Component {
         this.state = {
             articles: [], 
             currentPage: 1,
-            newsPerPage: 5
+            newsPerPage: 10
         };
     }
 
@@ -35,7 +35,7 @@ class Articles extends Component {
                 {currentArticles.map((article,index) => (
                     <li key={index} className='list-group-item'>
                         <div><a href={article.url} target="_blank">{article.title}</a></div>
-                        <div><img src={article.urlToImage} style={{width: '30vw'}}/></div>
+                        <div><img src={article.urlToImage} style={{width: '20vw'}}/></div>
                     </li>        
                 ))}
                 <Pagination
