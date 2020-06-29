@@ -5,28 +5,9 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Articles from './Components/Articles';
 
-const api_key = process.env.REACT_APP_API_NEWS_KEY;
 
 const App = () => {
   
-  const [articles, setArticles] = useState([]);
-
-  useEffect(() => {
-    const fetchArticles = async () => {
-      fetch('http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey='+ api_key)
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        setArticles(data.articles);
-      });
-    };
-
-    fetchArticles();
-
-  }, []);
-
-
   return (
     <Provider store={store}>
       <div className='container mt-5'>
