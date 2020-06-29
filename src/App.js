@@ -16,7 +16,6 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [newsPerPage] = useState(10);
 
-  //const nSelector = useSelector((state) => state.newsState);
   //const dispatch = useDispatch();
   //const gethNews = () => dispatch(fetchNews());
 
@@ -32,7 +31,7 @@ const App = () => {
     };
 
     fetchArticles();
-    //gethNews();
+    //fetchNews();
   }, []);
 
   //Get current articles

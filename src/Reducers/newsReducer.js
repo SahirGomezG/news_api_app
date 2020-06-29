@@ -16,7 +16,7 @@ export default (state = initialState , action) => {
 }*/
 
 const newsReducer = (state = { myNews :[] }, action) => {
-    if(action.type === "FETCH_TECH"){         
+    if(action.type === "FETCH_NEWS"){         
         state= {...state, myNews: action.payload}
     }
         return state;
